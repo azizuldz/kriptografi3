@@ -3,6 +3,7 @@ def polyalphabet_cipher(plaintext, key):
     alphabets = []
     for i in range(len(key)):
         shift = ord(key[i]) - 65
+        alphabet = [chr((j + shift) % 26 + 65) for j in range(26)]
         alphabets.append(alphabet)
     ciphertext = ""
     for i in range(len(plaintext)):
